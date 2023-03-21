@@ -10,6 +10,11 @@ var schema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    age : {
+        type : Number,
+        required: true
+    },
+    telephone : String,
     gender : String,
     status : String
 })

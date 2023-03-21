@@ -2,7 +2,13 @@
 
 
 $("#add_user").submit(function(event){
-    alert("Data Inserted Successfully!");
+    Toastify({
+        text: "Data Inserted Successfully!",
+        gravity: 'bottom',
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
 })
 
 $("#update_user").submit(function(event){
@@ -23,7 +29,13 @@ $("#update_user").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
-        alert("Data Updated Successfully!");
+        Toastify({
+            text: "Data Updated Successfully!",
+            gravity: 'bottom',
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+          }).showToast();
     })
 
 })
@@ -40,7 +52,13 @@ if(window.location.pathname == "/"){
 
         if(confirm("Do you really want to delete this record?")){
             $.ajax(request).done(function(response){
-                alert("Data Deleted Successfully!");
+                Toastify({
+                    text: "Data Deleted Successfully!",
+                    gravity: 'bottom',
+                    style: {
+                        background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    },
+                  }).showToast();
                 location.reload();
             })
         }
